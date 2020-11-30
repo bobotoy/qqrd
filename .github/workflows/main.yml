@@ -1,5 +1,5 @@
 # File: .github/workflows/repo-sync.yml
-name: sync-lxk0301-scripts #action名字，随便起
+name: ziye12-JavaScript #action名字，随便起
 on:
   schedule:
     - cron: '1 0,15 * * *'
@@ -9,7 +9,7 @@ on:
   push:
     branches: [ master ]
   repository_dispatch:
-    types: sync-lxk0301-jd_scripts #同随便起
+    types: ziye12-JavaScript #同随便起
 jobs:
   repo-sync:
     env:
@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           persist-credentials: false
-      - name: sync lxk0301-scripts
+      - name: sync ziye12-JavaScript
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
